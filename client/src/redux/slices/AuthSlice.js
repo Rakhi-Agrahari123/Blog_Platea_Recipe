@@ -4,7 +4,7 @@ import { handleError, handlesuccess } from "../../util";
 
 export const signUpThunk = createAsyncThunk("auth/register", async (data) => {
   const response = await axios.post(
-    "http://localhost:5000/api/user/register",
+    "https://blog-platea-recipe-1.onrender.com",
     data
   );
   console.log(response);
@@ -19,7 +19,7 @@ export const loginThunk = createAsyncThunk(
   async (data, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/user/login",
+        "https://blog-platea-recipe-1.onrender.com",
         data
       );
       console.log(response);
@@ -41,7 +41,7 @@ export const fetchRecipe = createAsyncThunk(
     async( _ , { rejectWithValue }) =>{
         try {
             const response = await axios.get(
-                "http://localhost:5000/api/recipe"
+                "https://blog-platea-recipe-1.onrender.com"
             );
             console.log(response);
             return response.data;
@@ -86,7 +86,7 @@ export const createRecipeThunk = createAsyncThunk(
 try{
     const token = localStorage.getItem("token");
 const response = await axios.post(
-  "http://localhost:8000/api/recipe",
+  "https://blog-platea-recipe-1.onrender.com",
   formData, 
   {
     headers:{
