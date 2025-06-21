@@ -1,9 +1,8 @@
 import React from "react";
 import Heart from "../assets/svgImg/Heart.svg";
 import Bookmark from "../assets/svgImg/Bookmark.svg";
-import Watch from "../assets/svgImg/Watch.svg";
 import { FaStar } from "react-icons/fa6";
-
+import { FaClock } from "react-icons/fa";
 
 const Card = ({ img, rating, menu, description, time, flag, country, cheafImg, cheafName }) => {
   return (
@@ -40,7 +39,7 @@ const Card = ({ img, rating, menu, description, time, flag, country, cheafImg, c
 
         <ul className="flex justify-start items-center gap-5 pt-[15px] text-[#A1A1A1] text-[14px]">
           <li className="flex items-center gap-2">
-            <img src={Watch} alt="Time" />
+            <img src={<FaClock /></img>} alt="Time" />
             <span>{time}</span>
           </li>
 
