@@ -39,10 +39,10 @@ const Card = ({ img, rating, menu, description, time, flag, country, cheafImg, c
 
         <ul className="flex justify-start items-center gap-5 pt-[15px] text-[#A1A1A1] text-[14px]">
           <li className="flex items-center gap-2">
-            <img src={<FaClock /></img>} alt="Time" />
-            <span>{time}</span>
-          </li>
-
+             
+  <FaClock />
+  <span>{time}</span>
+</li>
           <li className="flex items-center gap-2">
             <img src={flag} className="h-[17px]" alt="Country Flag" />
             <span>{country}</span>
