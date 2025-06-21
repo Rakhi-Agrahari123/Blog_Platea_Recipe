@@ -13,3 +13,5 @@ export const handleError = (msg) => {
         position : 'top-right',
     })
 }
+
+const BACKEND_URL = "https://blog-platea-recipe-1.onrender.com";
