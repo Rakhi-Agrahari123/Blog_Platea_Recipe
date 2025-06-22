@@ -13,10 +13,11 @@ const AdminPanel = () => {
       <aside className="w-64 bg-gray-800 text-white p-6 space-y-4">
         <h2 className="text-xl font-bold mb-6">Admin Panel</h2>
         <nav className="space-y-2">
-          <NavLink to="/admin/" className={({isActive}) => isActive ? 'text-yellow-400' : 'text-white'}>Dashboard</NavLink>
-          <NavLink to="/admin/add-recipe" className={({isActive}) => isActive ? 'text-yellow-400' : 'text-white'}>Manage Recipes</NavLink>
-          <NavLink to="/admin/manage-cuisines" className={({isActive}) => isActive ? 'text-yellow-400' : 'text-white'}>Manage Cuisines</NavLink>
-          <NavLink to="/admin/manage-blogs" className={({isActive}) => isActive ? 'text-yellow-400' : 'text-white'}>Manage Blogs</NavLink>
+          <NavLink to="/admin/dashboard" className={({isActive}) => isActive ? 'text-yellow-400' : 'text-white'}>Dashboard</NavLink>
+          <NavLink to="admin/recipes" className={({isActive}) => isActive ? 'text-yellow-400' : 'text-white'}>Manage Recipes</NavLink>
+          <NavLink to="admin/cuisines" className={({isActive}) => isActive ? 'text-yellow-400' : 'text-white'}>Manage Cuisines</NavLink>
+          <NavLink to="admin/blogs" className={({isActive}) => isActive ? 'text-yellow-400' : 'text-white'}>Manage Blogs</NavLink>
+          <NavLink to="admin/cuisines" className={({isActive}) => isActive ? 'text-yellow-400' : 'text-white'}>CuisineForm</NavLink>
         </nav>
       </aside>
 

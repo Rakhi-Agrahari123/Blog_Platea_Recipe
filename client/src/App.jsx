@@ -17,6 +17,9 @@ import ManageCuisines from "./page/admin/ManageCuisines";
 import ManageBlogs from "./page/admin/ManageBlogs";
 import Dashboard from "./page/admin/Dashboard";
 import Unauthorized from "./page/Unauthorized";
+import Recipe from "./page/Recipe_Indigredients";
+import Blog from "./page/Blog";
+import Features from "./page/Features";
 
 const MainLayout = () => (
   <>
@@ -28,46 +31,6 @@ const MainLayout = () => (
 
 const App = () => {
   return (
-//     <BrowserRouter>
-//       <Routes>
-
-//                 {/* Layout wrapper */}
-//         <Route path="/" element={<MainLayout />}>
-
-//          {/* Public Route */}
-//         <Route path="*" element={<Navigate to="/" />} />
-//         <Route path="/signup" element={<Signup />} />
-//         <Route path="/login" element={<Login />} />
-//           <Route path="/" element={<Home />} />
-
-     
-//           <Route index element={<Navigate to="/home" />} />
-//           {/* <Route path="recipe" element={<Recipe />} /> */}
-//         </Route>
-
-//           <Route path="recipe_ingredients" element={<Recipe_Indigredients />} />
-//           <Route path="cuisine" element={<CuisineForm />} />
-//           <Route path="recipeform" element={<RecipeForm/>} />
-    
-//   {/* Protected Routes */}
-//     <Route element={<PrivateRoute />}>
-//       <Route path="/profile" element={<UserProfile />} />
-//     </Route>
-
-//         {/* admin panal */}
-//          <Route path="/admin/*" element={<AdminPanel />} />
-
-// {/* Admin Only */}
-//     <Route element={<AdminRoute />}>
-//       <Route path="/admin/cuisines" element={<ManageCuisines />} />
-//       <Route path="/admin/add-cuisine" element={<CuisineForm />} />
-//     </Route>
-
-//     <Route path="/unauthorized" element={<Unauthorized />} />
-//     <Route path="*" element={<NotFound />} />
-
-//       </Routes>
-//     </BrowserRouter>
 
 <BrowserRouter>
       <Routes>
@@ -81,7 +44,8 @@ const App = () => {
           <Route path="recipe_ingredients" element={<Recipe_Indigredients />} />
           <Route path="recipeform" element={<RecipeForm />} />
           <Route path="cuisine" element={<CuisineForm />} />
-
+<Route path="/blogs" element={<Blog />} />
+<Route path="/features" element={<Features />} />
           {/* Protected User Routes */}
           <Route element={<PrivateRoute />}>
             <Route path="profile" element={<UserProfile />} />
@@ -93,10 +57,10 @@ const App = () => {
           {/* Admin-Only Routes */}
           <Route element={<AdminRoute />}>
             <Route path="admin/dashboard" element={<Dashboard/>} />
-            <Route path="admin/cuisines" element={<ManageCuisines/>} />
+            <Route path="admin/manage-cuisines" element={<ManageCuisines/>} />
             <Route path="admin/blogs" element={<ManageBlogs/>} />
-            <Route path="admin/cuisines" element={<ManageCuisines/>} />
-            <Route path="admin/add-cuisine" element={<CuisineForm />} />
+            <Route path="admin/recipes" element={<Recipe/>} />
+            <Route path="admin/cuisines" element={<CuisineForm />} />
           </Route>
 
           {/* Error / Access */}

@@ -65,7 +65,7 @@ const Navbar = () => {
           <li className="flex items-center px-4 py-2 hover:bg-white hover:text-red-500 rounded-xl cursor-pointer">
             Categories <FaAngleDown className="ml-1" />
           </li>
-          <Link to="/blog">
+          <Link to="/blogs">
             <li className="px-4 py-2 hover:bg-white hover:text-red-500 rounded-xl cursor-pointer">
               Blog
             </li>
@@ -148,7 +148,7 @@ const Navbar = () => {
             <li className="flex items-center py-2">
               Categories <FaAngleDown className="ml-1" />
             </li>
-            <Link to="/blog" onClick={() => setMenuOpen(false)}>
+            <Link to="/blogs" onClick={() => setMenuOpen(false)}>
               <li className="py-2">Blog</li>
             </Link>
             <Link to="/features" onClick={() => setMenuOpen(false)}>
