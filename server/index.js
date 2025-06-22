@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 
 app.use('/api/user', userRoute);
 app.use('/api/recipe', recipeRoute);
-app.use('/api/cuisines', cuisineRoute);
+app.use('/api', cuisineRoute);
 
 
 app.listen(PORT, () => {

@@ -22,13 +22,15 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleBtn = () => {
-    navigate("/addrecipe");
+    navigate("/admin/*");
   };
 
   const dispatch = useDispatch();
 
   const handleLogout = () => {
     dispatch(logout());
+    localStorage.clear()
+
     navigate("/login");
   };
 
@@ -105,7 +107,7 @@ const Navbar = () => {
 
           <HiMiniMagnifyingGlass className="h-6 w-6 text-white  transition scale-105 hover:scale-115 cursor-pointer" />
           <ButtonCommon
-            name="Add Recipe"
+            name="Admin Panal"
             style="p-[10px_18px] bg-white text-red-500 hover:bg-green-500 rounded-lg"
             onClick={handleBtn}
           />
@@ -161,18 +163,19 @@ const Navbar = () => {
           </div>
 
           <ButtonCommon
-            name="Add Recipe"
+            name="Admin Panal"
             style="mt-4 p-[10px_18px] bg-white text-red-500 hover:bg-gray-100 rounded-lg w-full"
             onClick={handleBtn}
           />
 
-          <Link to={"/login"}>
+        <Link to={"/login"}>
             <ButtonCommon
               name="Logout Here"
               style="mt-4 p-[10px_18px] bg-white text-red-500 hover:bg-gray-100 rounded-lg w-full"
               onClick={handleLogout}
             />
           </Link>
+
         </div>
       )}
     </header>

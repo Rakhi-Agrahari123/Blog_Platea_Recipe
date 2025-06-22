@@ -9,12 +9,18 @@ const RegisterValidation = (req, res, next) => {
         email: Joi.string().email().required(),
 
         password: Joi.string().min(4).max(100).required(),
+        role: Joi.string().min(4).max(5).required(),
     });
+    profilePicture: Joi.string().uri().optional()
 
     const { error } = schema.validate(req.body);
 
     if (error) {
-        res.status(400).json({msg: "Bad request", error});
+        // res.status(400).json({msg: "Bad request", error});
+        if (error) {
+  return res.status(400).json({ msg: "Bad request", error: error.details[0].message });
+}
+
     }
 
     next();
