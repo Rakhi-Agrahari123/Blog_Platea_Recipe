@@ -22,7 +22,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleBtn = () => {
-    navigate("/admin/*");
+    navigate("/admin/dashboard");
   };
 
   const dispatch = useDispatch();
@@ -145,9 +145,13 @@ const Navbar = () => {
             <Link to="/cuisine" onClick={() => setMenuOpen(false)}>
               <li className="py-2">Cuisines</li>
             </Link>
+
+            <Link to="/recipe_ingredients" onClick={() => setMenuOpen(false)}>
             <li className="flex items-center py-2">
               Categories <FaAngleDown className="ml-1" />
             </li>
+            </Link>
+
             <Link to="/blogs" onClick={() => setMenuOpen(false)}>
               <li className="py-2">Blog</li>
             </Link>
